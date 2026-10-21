@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A privacy-reviewed gallery of genuine Worldlens desktop companion captures, with source and verification limits for every image.">
+  <title>Worldlens visual evidence</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./gallery.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-en="Skip to captures" data-yue="跳至畫面">Skip to captures</a>
+  <header class="topbar">
+    <a class="brand" href="#main" aria-label="Worldlens visual evidence home">
+      <span class="brand-mark" aria-hidden="true">W</span>
+      <span><strong>Worldlens</strong><small data-en="Visual evidence" data-yue="畫面證據">Visual evidence</small></span>
+    </a>
+    <nav aria-label="Page sections">
+      <a href="#captures" data-en="Captures" data-yue="畫面">Captures</a>
+      <a href="#provenance" data-en="Provenance" data-yue="來源資料">Provenance</a>
+      <a href="#limits" data-en="Limits" data-yue="限制">Limits</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow" data-en="Reviewed companion captures" data-yue="已檢視的輔助程式畫面">Reviewed companion captures</p>
+      <h1 id="page-title" data-en="Real screens, with their evidence attached." data-yue="真實畫面，連同證據一併呈現。">Real screens, with their evidence attached.</h1>
+      <p class="lede" data-en="Six genuine images document the offline guide and build companion. Each card states what the capture shows, which source it is bound to, and what remains unverified." data-yue="六張真實畫面記錄離線指南及建置輔助程式。每張卡片都會說明畫面內容、所屬來源，以及仍未驗證的部分。">Six genuine images document the offline guide and build companion. Each card states what the capture shows, which source it is bound to, and what remains unverified.</p>
+      <div class="review-note" role="note">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span data-en="Six images reviewed. Capture timestamps are unavailable. This gallery does not claim full product acceptance." data-yue="已檢視六張畫面。擷取時間未有記錄。本畫廊不代表產品已全面驗收。">Six images reviewed. Capture timestamps are unavailable. This gallery does not claim full product acceptance.</span>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="Gallery controls">
+      <div class="search-wrap">
+        <label for="search" data-en="Search the capture inventory" data-yue="搜尋畫面清單">Search the capture inventory</label>
+        <div class="search-row">
+          <input id="search" type="search" autocomplete="off" placeholder="Search captions, states, and source identifiers" data-placeholder-en="Search captions, states, and source identifiers" data-placeholder-yue="搜尋說明、狀態及來源識別碼">
+          <button id="regex-toggle" type="button" aria-pressed="false" data-en="Regex off" data-yue="規則搜尋關閉">Regex off</button>
+          <label class="flags-wrap" for="regex-flags" data-en="Flags" data-yue="旗標">Flags <input id="regex-flags" type="text" value="i" maxlength="6" aria-label="Regular expression flags" disabled></label>
+        </div>
+        <p id="search-help" class="hint" data-en="Plain text search is active by default. Turn on regex to use a JavaScript regular expression." data-yue="預設使用純文字搜尋。開啟規則搜尋後，可使用 JavaScript 正規表示式。">Plain text search is active by default. Turn on regex to use a JavaScript regular expression.</p>
+        <p id="search-error" class="error" role="alert" hidden></p>
+      </div>
+      <div class="select-wrap">
+        <label for="filter" data-en="Surface" data-yue="介面">Surface</label>
+        <select id="filter">
+          <option value="all" data-en="All captures" data-yue="所有畫面">All captures</option>
+          <option value="guide" data-en="Offline guide" data-yue="離線指南">Offline guide</option>
+          <option value="build" data-en="Build companion" data-yue="建置輔助程式">Build companion</option>
+          <option value="worldlens" data-en="Worldlens settings" data-yue="Worldlens 設定">Worldlens settings</option>
+        </select>
+      </div>
+      <div class="select-wrap">
+        <label for="language" data-en="Language" data-yue="語言">Language</label>
+        <select id="language">
+          <option value="en" data-en="English" data-yue="英文">English</option>
+          <option value="yue" data-en="Cantonese" data-yue="粵語">Cantonese</option>
+          <option value="both" data-en="Bilingual" data-yue="雙語">Bilingual</option>
+        </select>
+      </div>
+      <div class="select-wrap">
+        <label for="theme" data-en="Appearance" data-yue="外觀">Appearance</label>
+        <select id="theme">
+          <option value="system" data-en="System" data-yue="跟隨系統">System</option>
+          <option value="light" data-en="Light" data-yue="淺色">Light</option>
+          <option value="dark" data-en="Dark" data-yue="深色">Dark</option>
+        </select>
+      </div>
+    </section>
+
+    <p id="result-count" class="result-count" aria-live="polite" data-en="Loading reviewed captures…" data-yue="正在載入已檢視的畫面…">Loading reviewed captures…</p>
+    <div id="capture-grid" class="capture-grid" aria-live="polite"></div>
+    <p id="load-error" class="error" role="alert" hidden data-en="The capture inventory could not be loaded. Open the machine-readable inventory directly." data-yue="無法載入畫面清單。請直接開啟機器可讀的清單。">The capture inventory could not be loaded. Open the machine-readable inventory directly.</p>
+
+    <section id="provenance" class="content-section" aria-labelledby="provenance-title">
+      <p class="eyebrow" data-en="How to read the cards" data-yue="如何閱讀卡片">How to read the cards</p>
+      <h2 id="provenance-title" data-en="Provenance is part of the image." data-yue="來源資料是畫面的一部分。">Provenance is part of the image.</h2>
+      <p data-en="Every included file matches its source manifest hash. Five native images share source identifier 2e9162c87575a35fe6dd7c17282b39c1a26485aa. The browser image uses source identifier fd74262d62d99990f999865543f105369b4875a0. These are provenance labels only; the first identifier is not currently available through the public Worldlens source repository." data-yue="每個收錄檔案均與來源清單中的雜湊值相符。五張原生畫面使用來源識別碼 2e9162c87575a35fe6dd7c17282b39c1a26485aa。瀏覽器畫面使用來源識別碼 fd74262d62d99990f999865543f105369b4875a0。這些識別碼只作來源標記；第一個識別碼目前無法在公開的 Worldlens 原始碼庫中取得。">Every included file matches its source manifest hash. Five native images share source identifier <code>2e9162c87575a35fe6dd7c17282b39c1a26485aa</code>. The browser image uses source identifier <code>fd74262d62d99990f999865543f105369b4875a0</code>. These are provenance labels only; the first identifier is not currently available through the public Worldlens source repository.</p>
+      <p data-en="Capture timestamps are unavailable for all six images. The build time shown inside one product screen is product UI content, not capture-time evidence. The broader historical image set was not copied because its manifest records a local run and does not provide per-image privacy review for this gallery." data-yue="六張畫面的擷取時間均未有記錄。產品畫面顯示的建置時間屬於介面內容，並非擷取時間證據。較廣泛的舊有畫面集未有複製，因為其清單只記錄本機執行，亦沒有為本畫廊提供逐張隱私檢視。">Capture timestamps are unavailable for all six images. The build time shown inside one product screen is product UI content, not capture-time evidence. The broader historical image set was not copied because its manifest records a local run and does not provide per-image privacy review for this gallery.</p>
+      <p><a href="./features/captures/provenance.html" data-en="Read the provenance and privacy notes" data-yue="閱讀來源與隱私說明">Read the provenance and privacy notes</a> · <a href="./captures.json" data-en="Open the complete capture inventory" data-yue="開啟完整畫面清單">Open the complete capture inventory</a></p>
+    </section>
+
+    <section id="limits" class="content-section limits" aria-labelledby="limits-title">
+      <p class="eyebrow" data-en="Boundaries" data-yue="範圍界線">Boundaries</p>
+      <h2 id="limits-title" data-en="What these images do not prove." data-yue="這些畫面不能證明甚麼。">What these images do not prove.</h2>
+      <ul>
+        <li data-en="Portable delivery or complete feature acceptance." data-yue="可攜式交付或完整功能驗收。">Portable delivery or complete feature acceptance.</li>
+        <li data-en="A complete language, theme, and display-scale matrix." data-yue="完整的語言、主題及顯示比例矩陣。">A complete language, theme, and display-scale matrix.</li>
+        <li data-en="Public access to the source revision named by each provenance label." data-yue="可公開存取每個來源標記所指的修訂版本。">Public access to the source revision named by each provenance label.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p data-en="Privacy-reviewed visual evidence for Worldlens. Capture times and unavailable verification remain explicit." data-yue="Worldlens 的隱私檢視畫面證據。擷取時間及未能驗證的事項均會清楚列明。">Privacy-reviewed visual evidence for Worldlens. Capture times and unavailable verification remain explicit.</p>
+    <a href="https://github.com/Ding-Ding-Projects/worldlens" rel="noopener">Worldlens source repository</a>
+  </footer>
+
+  <dialog id="image-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-bar"><strong id="dialog-title"></strong><button id="dialog-close" type="button" data-en="Close" data-yue="關閉">Close</button></div>
+    <img id="dialog-image" alt="">
+    <p id="dialog-caption"></p>
+  </dialog>
+</body>
+</html>
