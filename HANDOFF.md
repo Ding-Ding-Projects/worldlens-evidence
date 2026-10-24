@@ -18,4 +18,3 @@
 2. Verify the live home page, inventory, provenance article, and all fifteen image URLs.
 3. Read back the exact repository homepage URL with `gh`.
 4. Return the verified gallery URL to the source task for its README backlink and verify that source-side readback there.
-
