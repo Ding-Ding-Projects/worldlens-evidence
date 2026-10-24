@@ -6,7 +6,7 @@ import path from 'node:path';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const inventoryPath = path.join(root, 'docs', 'captures.json');
 const inventory = JSON.parse(await readFile(inventoryPath, 'utf8'));
-if (inventory.captures.length !== 6) throw new Error(`Expected 6 reviewed captures, found ${inventory.captures.length}`);
+if (inventory.captures.length !== 15) throw new Error(`Expected 15 reviewed captures, found ${inventory.captures.length}`);
 
 for (const capture of inventory.captures) {
   const relative = capture.image;
@@ -27,4 +27,4 @@ if (!html.includes('id="capture-grid"') || !html.includes('id="result-count"')) 
 if (!renderer.includes("fetch(inventoryUrl)") || !renderer.includes('for (const item of visible)')) {
   throw new Error('Gallery renderer is not loading and rendering the checked inventory');
 }
-console.log(`PASS: 6 reviewed image hashes and 6 gallery records verified.`);
+console.log(`PASS: 15 reviewed image hashes and 15 gallery records verified.`);

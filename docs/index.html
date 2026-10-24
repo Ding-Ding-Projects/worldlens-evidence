@@ -25,12 +25,12 @@
 
   <main id="main">
     <section class="intro" aria-labelledby="page-title">
-      <p class="eyebrow" data-en="Reviewed companion captures" data-yue="已檢視的輔助程式畫面">Reviewed companion captures</p>
+      <p class="eyebrow" data-en="Inspect the native Worldlens baseline" data-yue="檢視 Worldlens 原生基線">Inspect the native Worldlens baseline</p>
       <h1 id="page-title" data-en="Real screens, with their evidence attached." data-yue="真實畫面，連同證據一併呈現。">Real screens, with their evidence attached.</h1>
-      <p class="lede" data-en="Six genuine images document the offline guide and build companion. Each card states what the capture shows, which source it is bound to, and what remains unverified." data-yue="六張真實畫面記錄離線指南及建置輔助程式。每張卡片都會說明畫面內容、所屬來源，以及仍未驗證的部分。">Six genuine images document the offline guide and build companion. Each card states what the capture shows, which source it is bound to, and what remains unverified.</p>
+      <p class="lede" data-en="Browse the first-run setup, home workspace, map workspace, server list, and settings. Filter by surface, search the reviewed inventory, or open an image to inspect its full-resolution pixels and source record." data-yue="瀏覽首次設定、主畫面、地圖工作區、伺服器清單及設定。可按介面篩選、搜尋已檢視清單，或開啟影像檢視原始像素及來源記錄。">Browse the first-run setup, home workspace, map workspace, server list, and settings. Filter by surface, search the reviewed inventory, or open an image to inspect its full-resolution pixels and source record.</p>
       <div class="review-note" role="note">
         <span class="status-dot" aria-hidden="true"></span>
-        <span data-en="Six images reviewed. Capture timestamps are unavailable. This gallery does not claim full product acceptance." data-yue="已檢視六張畫面。擷取時間未有記錄。本畫廊不代表產品已全面驗收。">Six images reviewed. Capture timestamps are unavailable. This gallery does not claim full product acceptance.</span>
+        <span data-en="Fifteen images reviewed. Capture timestamps are unavailable. This gallery does not claim full product acceptance." data-yue="已檢視十五張畫面。擷取時間未有記錄。本畫廊不代表產品已全面驗收。">Fifteen images reviewed. Capture timestamps are unavailable. This gallery does not claim full product acceptance.</span>
       </div>
     </section>
 
@@ -52,6 +52,7 @@
           <option value="guide" data-en="Offline guide" data-yue="離線指南">Offline guide</option>
           <option value="build" data-en="Build companion" data-yue="建置輔助程式">Build companion</option>
           <option value="worldlens" data-en="Worldlens settings" data-yue="Worldlens 設定">Worldlens settings</option>
+          <option value="baseline" data-en="Native baseline" data-yue="原生基線">Native baseline</option>
         </select>
       </div>
       <div class="select-wrap">
@@ -79,8 +80,8 @@
     <section id="provenance" class="content-section" aria-labelledby="provenance-title">
       <p class="eyebrow" data-en="How to read the cards" data-yue="如何閱讀卡片">How to read the cards</p>
       <h2 id="provenance-title" data-en="Provenance is part of the image." data-yue="來源資料是畫面的一部分。">Provenance is part of the image.</h2>
-      <p data-en="Every included file matches its source manifest hash. Five native images share source identifier 2e9162c87575a35fe6dd7c17282b39c1a26485aa. The browser image uses source identifier fd74262d62d99990f999865543f105369b4875a0. These are provenance labels only; the first identifier is not currently available through the public Worldlens source repository." data-yue="每個收錄檔案均與來源清單中的雜湊值相符。五張原生畫面使用來源識別碼 2e9162c87575a35fe6dd7c17282b39c1a26485aa。瀏覽器畫面使用來源識別碼 fd74262d62d99990f999865543f105369b4875a0。這些識別碼只作來源標記；第一個識別碼目前無法在公開的 Worldlens 原始碼庫中取得。">Every included file matches its source manifest hash. Five native images share source identifier <code>2e9162c87575a35fe6dd7c17282b39c1a26485aa</code>. The browser image uses source identifier <code>fd74262d62d99990f999865543f105369b4875a0</code>. These are provenance labels only; the first identifier is not currently available through the public Worldlens source repository.</p>
-      <p data-en="Capture timestamps are unavailable for all six images. The build time shown inside one product screen is product UI content, not capture-time evidence. The broader historical image set was not copied because its manifest records a local run and does not provide per-image privacy review for this gallery." data-yue="六張畫面的擷取時間均未有記錄。產品畫面顯示的建置時間屬於介面內容，並非擷取時間證據。較廣泛的舊有畫面集未有複製，因為其清單只記錄本機執行，亦沒有為本畫廊提供逐張隱私檢視。">Capture timestamps are unavailable for all six images. The build time shown inside one product screen is product UI content, not capture-time evidence. The broader historical image set was not copied because its manifest records a local run and does not provide per-image privacy review for this gallery.</p>
+      <p data-en="Every included file matches its source manifest hash. Five offline-guide images share source identifier 2e9162c87575a35fe6dd7c17282b39c1a26485aa. Nine additional native Worldlens baseline images use source identifier 00290f2fb45f1b9bc9748b2db973d68aaa1a50c. The browser image uses source identifier fd74262d62d99990f999865543f105369b4875a0. These are provenance labels only; the guide source is not currently available through the public Worldlens source repository. The baseline is limited to the recorded source revision and does not establish current-release behavior." data-yue="每個收錄檔案均與來源清單中的雜湊值相符。五張離線指南畫面使用來源識別碼 2e9162c87575a35fe6dd7c17282b39c1a26485aa。九張新基線畫面使用來源識別碼 00290f2fb45f1b9bc9748b2db973d68aaa1a50c。瀏覽器畫面使用來源識別碼 fd74262d62d99990f999865543f105369b4875a0。這些識別碼只作來源標記；基線不代表目前發佈版本。">Every included file matches its source manifest hash. Five offline-guide images share source identifier <code>2e9162c87575a35fe6dd7c17282b39c1a26485aa</code>. Nine native baseline images use source identifier <code>00290f2fb45f1b9bc9748b2db973d68aaa1a50c</code>. The browser image uses source identifier <code>fd74262d62d99990f999865543f105369b4875a0</code>. These are provenance labels only. Neither the guide source nor the baseline revision is currently resolvable through the public Worldlens source repository; the baseline does not establish current-release behavior.</p>
+      <p data-en="Capture timestamps are unavailable for all fifteen images. The build time shown inside one product screen is product UI content, not capture-time evidence. The nine new baseline captures separate native 1280 by 800 window images at 96 DPI from 800 by 600 renderer emulation. The latter is not native-window or display-scale proof. The configuration image is excluded because a shortcuts overlay obscures its content. The broader historical image set was not copied because its manifest records a local run and does not provide per-image privacy review for this gallery." data-yue="十五張畫面的擷取時間均未有記錄。產品畫面顯示的建置時間屬於介面內容，並非擷取時間證據。較廣泛的舊有畫面集未有複製，因為其清單只記錄本機執行，亦沒有為本畫廊提供逐張隱私檢視。">Capture timestamps are unavailable for all fifteen images. The build time shown inside one product screen is product UI content, not capture-time evidence. The nine new baseline captures separate native 1280 by 800 window images at 96 DPI from 800 by 600 renderer emulation. The latter is not native-window or display-scale proof. The configuration image is excluded because a shortcuts overlay obscures its content. The broader historical image set was not copied because its manifest records a local run and does not provide per-image privacy review for this gallery.</p>
       <p><a href="./features/captures/provenance.html" data-en="Read the provenance and privacy notes" data-yue="閱讀來源與隱私說明">Read the provenance and privacy notes</a> · <a href="./captures.json" data-en="Open the complete capture inventory" data-yue="開啟完整畫面清單">Open the complete capture inventory</a></p>
     </section>
 
@@ -88,9 +89,9 @@
       <p class="eyebrow" data-en="Boundaries" data-yue="範圍界線">Boundaries</p>
       <h2 id="limits-title" data-en="What these images do not prove." data-yue="這些畫面不能證明甚麼。">What these images do not prove.</h2>
       <ul>
-        <li data-en="Portable delivery or complete feature acceptance." data-yue="可攜式交付或完整功能驗收。">Portable delivery or complete feature acceptance.</li>
-        <li data-en="A complete language, theme, and display-scale matrix." data-yue="完整的語言、主題及顯示比例矩陣。">A complete language, theme, and display-scale matrix.</li>
-        <li data-en="Public access to the source revision named by each provenance label." data-yue="可公開存取每個來源標記所指的修訂版本。">Public access to the source revision named by each provenance label.</li>
+        <li data-en="Current-release behavior, terrain rendering, server creation, portable delivery, or complete feature acceptance." data-yue="目前發佈版本的行為、地形渲染、伺服器建立、可攜式交付或完整功能驗收。">Current-release behavior, terrain rendering, server creation, portable delivery, or complete feature acceptance.</li>
+        <li data-en="A complete language, theme, display-scale matrix, terrain rendering, or server creation." data-yue="完整的語言、主題及顯示比例矩陣。">A complete language, theme, display-scale matrix, terrain rendering, or server creation.</li>
+        <li data-en="Public access to each source revision named by a provenance label." data-yue="公開來源庫目前無法讀取部分來源標記所指的修訂版本。">Some source revisions named by a provenance label are not currently available through the public source repository.</li>
       </ul>
     </section>
   </main>

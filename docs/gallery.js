@@ -64,6 +64,7 @@ function activePattern() {
 function groupFor(item) {
   if (item.id.startsWith('guide-')) return 'guide';
   if (item.id === 'build-version') return 'build';
+  if (item.id.startsWith('native-')) return 'baseline';
   return 'worldlens';
 }
 

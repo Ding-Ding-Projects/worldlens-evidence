@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "kind": "Sanitized source and build provenance",
+  "sourceRevision": "00290f2fb45f1b9bc9748b2db973d68aaa1a50c",
+  "sourceTreeSha256": "b8ee95efffcfd5b5d2b123333c3f4e2ce36b4c0b3ee1f963c9f40998e31aba14",
+  "mainBundleSha256": "4cbfb8c4b857f66f6771938df40b87279276c9d51301f2caa9dcd086d0db555f",
+  "runtime": "Electron v37.10.3",
+  "nativeCaptureWindow": {
+    "width": 1280,
+    "height": 800,
+    "dpi": 96
+  },
+  "rendererEmulation": {
+    "width": 800,
+    "height": 600,
+    "scale": 1
+  },
+  "captureTimestamps": "unavailable",
+  "captureRoute": "Native application capture on a named hidden desktop; exact process and capture receipts remain in the source task.",
+  "limits": [
+    "The source revision is a baseline identifier, not current-release proof.",
+    "The 800x600 frames are renderer emulation, not a native window or display-scale proof.",
+    "No map was loaded and no server was configured.",
+    "The configuration frame is excluded because a shortcuts overlay obscures it.",
+    "Capture timestamp was not recorded; build and file timestamps are not substitutes."
+  ],
+  "privacy": "Local paths, credentials, private identifiers, unrelated data, and private announcement imagery are omitted. Original included image bytes are preserved.",
+  "sourcePublicReadback": "unavailable: the public source repository returned no commit for this revision"
+}
